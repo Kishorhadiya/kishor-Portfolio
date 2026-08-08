@@ -5,7 +5,8 @@ export const personalDetails = {
   bio: "Passionate Fresher MERN Stack Developer with hands-on knowledge in building full-stack web applications using MongoDB, Express.js, React.js, and Node.js. Dedicated to developing scalable, responsive, and user-friendly web experiences.",
   email: "hadiyakishor01@gmail.com",
   location: "Ahmedabad, Gujarat",
-  resumeUrl: "https://drive.google.com/uc?export=download&id=1id0mckZrCgX9dK1YEODg9E7rJGSbAbb1", // Replace with your resume PDF link
+  resumeUrl:
+    "https://drive.google.com/uc?export=download&id=1kBYf652ceGr0d_MOCN0YJ-myf_J6RV1o", // Replace with your resume PDF link
   socials: {
     github: "https://github.com/Kishorhadiya",
     linkedin:
@@ -113,22 +114,36 @@ export const projectsData = [
   {
     id: 1,
     title: "Event Management System",
-    category: "MERN Stack",
+    category: "React.js",
     featured: true,
     image:
       "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
+
     shortDesc:
-      "A full-stack event management application built using MongoDB, Express.js, React.js, and Node.js.",
-    techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
+      "A modern event management web application built using React.js with a responsive and interactive user interface.",
+
+    techStack: [
+      "React.js",
+      "React Router DOM",
+      "Tailwind CSS",
+      "JavaScript",
+      "Axios",
+      "Framer Motion",
+    ],
+
     liveUrl: "https://veloura-hub.netlify.app/",
     githubUrl: "https://github.com/Kishorhadiya",
+
     highlights: [
-      "Built complete MERN stack architecture with MongoDB database schemas.",
-      "Implemented event browsing, booking management, and user interaction features.",
-      "Designed responsive UI with real-time feedback and state management.",
+      "Built a responsive event management interface using React.js.",
+      "Implemented event browsing, event details, ticket booking, and user profile features.",
+      "Added client-side routing and interactive UI components for a smooth user experience.",
+      "Implemented state management and local storage for favorites, wallet balance, and user-related data.",
+      "Designed a modern and responsive UI using Tailwind CSS and Framer Motion.",
     ],
+
     fullDetails:
-      "A full-stack event management application built using MongoDB, Express.js, React.js, and Node.js. Users can explore events, manage bookings, and interact with the platform through a responsive interface.",
+      "A modern event management web application developed using React.js. The platform allows users to explore events, view event details, book tickets, manage favorites, and interact with different sections through a responsive and user-friendly interface. React Router DOM is used for navigation, while Tailwind CSS and Framer Motion are used to create a modern and interactive user experience.",
   },
   {
     id: 2,
