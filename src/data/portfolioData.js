@@ -6,7 +6,7 @@ export const personalDetails = {
   email: "hadiyakishor01@gmail.com",
   location: "Ahmedabad, Gujarat",
   resumeUrl:
-    "https://drive.google.com/uc?export=download&id=1kBYf652ceGr0d_MOCN0YJ-myf_J6RV1o", // Replace with your resume PDF link
+    "https://drive.google.com/file/d/110O5hs0pIfMA2mTvHEIsZPiV9pv_J6n9/view?usp=sharing", // Replace with your resume PDF link
   socials: {
     github: "https://github.com/Kishorhadiya",
     linkedin:
@@ -155,7 +155,7 @@ export const projectsData = [
     shortDesc:
       "A MERN stack based assignment management platform to create, manage, and track assignments.",
     techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API"],
-    liveUrl: "https://edu-flow-frontend-coral.vercel.app/",
+    liveUrl: "https://edu-flow-frontend-delta.vercel.app/",
     githubUrl: "https://github.com/Kishorhadiya",
     highlights: [
       "Full CRUD operations for assignment creation, updates, and submissions.",
