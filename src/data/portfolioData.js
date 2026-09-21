@@ -185,6 +185,34 @@ export const projectsData = [
     fullDetails:
       "A full-stack Money Management application built using MongoDB, Express.js, React.js, and Node.js. Users can manage income and expenses, track transactions, monitor budgets, and analyze their financial data through a responsive and user-friendly interface.",
   },
+  {
+    id: 4,
+    title: "AURA — E-Commerce System",
+    category: "MERN Stack",
+    featured: true,
+    image:
+      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80",
+    shortDesc:
+      "A full-featured MERN stack e-commerce web platform with product catalog, cart & checkout, JWT authentication, and admin order management.",
+    techStack: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "REST API",
+    ],
+    liveUrl: "https://ecomsystems-frontend.onrender.com/login",
+    githubUrl: "https://github.com/Kishorhadiya/EcomSystems",
+    highlights: [
+      "Built responsive shopping storefront with product search, filtering, and detail views.",
+      "Designed secure RESTful API with Node.js and Express.js with JWT authentication.",
+      "Engineered MongoDB database schemas for products, user orders, and inventory.",
+      "Added admin dashboard capabilities for product CRUD and order status updates.",
+    ],
+    fullDetails:
+      "A production-grade full-stack E-Commerce platform built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The platform allows users to explore products by categories, search items, manage cart quantities, securely authenticate, and place orders. Includes an administrator dashboard to add/edit products, manage stock, and track order fulfillment.",
+  },
 ];
 
 export const educationTimeline = [

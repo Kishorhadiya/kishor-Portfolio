@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { projectsData } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
-import { ExternalLink, Github, Eye, Sparkles, FolderGit2 } from 'lucide-react';
+import { ExternalLink, Github, Eye, FolderGit2 } from 'lucide-react';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const categories = ["All", "MERN Stack", "PHP & MySQL"];
+  const categories = ["All", ...Array.from(new Set(projectsData.map(p => p.category)))];
 
   const filteredProjects = activeCategory === "All"
     ? projectsData
@@ -75,15 +75,10 @@ export default function Projects() {
 
                 {/* Content Details */}
                 <div className="p-6 space-y-4">
-                  <div className="flex items-center justify-between">
+                  <div>
                     <span className="text-xs font-semibold text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-500/30">
                       {project.category}
                     </span>
-                    {project.featured && (
-                      <span className="flex items-center gap-1 text-[11px] text-amber-300 font-semibold">
-                        <Sparkles className="w-3.5 h-3.5 fill-amber-400 text-amber-400" /> Featured
-                      </span>
-                    )}
                   </div>
 
                   <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
