@@ -187,7 +187,7 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "AURA — E-Commerce System",
+    title: "TREO.TECH STORE",
     category: "MERN Stack",
     featured: true,
     image:
@@ -202,7 +202,7 @@ export const projectsData = [
       "Tailwind CSS",
       "REST API",
     ],
-    liveUrl: "https://ecomsystems-frontend.onrender.com/login",
+    liveUrl: "https://ecomsystems-frontend.onrender.com/",
     githubUrl: "https://github.com/Kishorhadiya/EcomSystems",
     highlights: [
       "Built responsive shopping storefront with product search, filtering, and detail views.",
