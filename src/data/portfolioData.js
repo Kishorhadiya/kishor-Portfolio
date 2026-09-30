@@ -213,6 +213,37 @@ export const projectsData = [
     fullDetails:
       "A production-grade full-stack E-Commerce platform built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The platform allows users to explore products by categories, search items, manage cart quantities, securely authenticate, and place orders. Includes an administrator dashboard to add/edit products, manage stock, and track order fulfillment.",
   },
+  {
+    id: 5,
+    title: "CHAT APPLICATION",
+    category: "MERN Stack",
+    featured: true,
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80",
+    shortDesc:
+      "A real-time MERN stack chat application with Socket.IO, user authentication, private messaging, online status, and instant message delivery.",
+    techStack: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Socket.IO",
+      "JWT",
+      "REST API",
+    ],
+    liveUrl: "https://frontend-ms1h.onrender.com/",
+    githubUrl: "https://github.com/Kishorhadiya/WebSocketSocketio.git",
+    highlights: [
+      "Built a real-time chat application using Socket.IO for instant message delivery.",
+      "Implemented private one-to-one messaging between authenticated users.",
+      "Designed RESTful APIs with Node.js and Express.js for users and chat management.",
+      "Integrated MongoDB for storing users, messages, chat rooms, and message status.",
+      "Implemented online/offline user status and real-time message updates.",
+      "Added JWT-based authentication for secure user access.",
+    ],
+    fullDetails:
+      "A full-stack real-time Chat Application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) with Socket.IO for real-time communication. The application allows authenticated users to communicate through private chats, send and receive messages instantly, view online/offline status, and manage conversations. Socket.IO enables real-time communication between clients and the server without requiring page refreshes, while MongoDB stores user and message data securely.",
+  },
 ];
 
 export const educationTimeline = [
