@@ -244,7 +244,40 @@ export const projectsData = [
     fullDetails:
       "A full-stack real-time Chat Application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) with Socket.IO for real-time communication. The application allows authenticated users to communicate through private chats, send and receive messages instantly, view online/offline status, and manage conversations. Socket.IO enables real-time communication between clients and the server without requiring page refreshes, while MongoDB stores user and message data securely.",
   },
+  {
+    id: 6,
+    title: "Employee Management System",
+    category: "MERN Stack",
+    featured: true,
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    shortDesc:
+      "A full-featured MERN stack Employee Management System to streamline employee onboarding, department tracking, leave requests, and role-based access control.",
+    techStack: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "JWT",
+      "REST API",
+    ],
+    liveUrl: "https://team-ops-frontend.vercel.app/",
+    githubUrl: "https://github.com/Kishorhadiya/TeamOps.git",
+    highlights: [
+      "Engineered comprehensive CRUD operations for employee profiles, department allocation, and designations.",
+      "Implemented Role-Based Access Control (Admin & Employee) using JWT authentication and secure middleware.",
+      "Built leave management workflow allowing employees to apply for leave and admins to approve or reject requests.",
+      "Designed an interactive admin dashboard displaying department statistics, headcount, and employee records.",
+      "Constructed secure RESTful APIs with Node.js & Express.js with robust input validation and error handling.",
+      "Developed MongoDB schemas with Mongoose for relational data modeling between departments, users, and leaves.",
+    ],
+    fullDetails:
+      "A comprehensive Employee Management System built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The application simplifies organizational administration with centralized employee records management, role-based authentication, department allocations, leave tracking, and salary overview. Admins can manage employee directories, process leave requests, and oversee departments, while employees can view their profile data and track application statuses seamlessly.",
+  },
 ];
+
+
 
 export const educationTimeline = [
   {
