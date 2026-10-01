@@ -131,8 +131,8 @@ export const projectsData = [
       "Framer Motion",
     ],
 
-    liveUrl: "https://veloura-hub.netlify.app/",
-    githubUrl: "https://github.com/Kishorhadiya",
+    liveUrl: "https://veloura-event-management.vercel.app/",
+    githubUrl: "https://github.com/Kishorhadiya/veloura-event-management.git",
 
     highlights: [
       "Built a responsive event management interface using React.js.",
