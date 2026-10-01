@@ -231,7 +231,7 @@ export const projectsData = [
       "JWT",
       "REST API",
     ],
-    liveUrl: "https://frontend-ms1h.onrender.com/",
+    liveUrl: "https://websocketsocketio-frontend.onrender.com/",
     githubUrl: "https://github.com/Kishorhadiya/WebSocketSocketio.git",
     highlights: [
       "Built a real-time chat application using Socket.IO for instant message delivery.",
