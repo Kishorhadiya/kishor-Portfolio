@@ -132,7 +132,7 @@ export const projectsData = [
     ],
 
     liveUrl: "https://veloura-event-management.vercel.app/",
-    githubUrl: "https://github.com/Kishorhadiya/veloura-event-management.git",
+    githubUrl: "https://github.com/Kishorhadiya/veloura-event-management",
 
     highlights: [
       "Built a responsive event management interface using React.js.",
@@ -143,7 +143,7 @@ export const projectsData = [
     ],
 
     fullDetails:
-      "A modern event management web application developed using React.js. The platform allows users to explore events, view event details, book tickets, manage favorites, and interact with different sections through a responsive and user-friendly interface. React Router DOM is used for navigation, while Tailwind CSS and Framer Motion are used to create a modern and interactive user experience.",
+      "A modern event management web application developed using React.js,Tailwind css . The platform allows users to explore events, view event details, book tickets, manage favorites, and interact with different sections through a responsive and user-friendly interface. React Router DOM is used for navigation, while Tailwind CSS and Framer Motion are used to create a modern and interactive user experience.",
   },
   {
     id: 2,
@@ -276,8 +276,6 @@ export const projectsData = [
       "A comprehensive Employee Management System built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The application simplifies organizational administration with centralized employee records management, role-based authentication, department allocations, leave tracking, and salary overview. Admins can manage employee directories, process leave requests, and oversee departments, while employees can view their profile data and track application statuses seamlessly.",
   },
 ];
-
-
 
 export const educationTimeline = [
   {
