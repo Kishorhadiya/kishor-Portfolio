@@ -8,10 +8,10 @@ const Github = () => {
   const statsRef = useRef(null);
 
   const githubStats = [
-    { label: 'PUBLIC REPOS', value: '25+', icon: <FiCode />, },
-    { label: 'ANNUAL COMMITS', value: '850+', icon: <FiGitCommit /> },
-    { label: 'PULL REQUESTS', value: '45+', icon: <FiGitPullRequest /> },
-    { label: 'STARS EARNED', value: '18+', icon: <FiStar /> },
+    { label: 'PUBLIC REPOS', value: '15+', icon: <FiCode />, },
+    { label: 'ANNUAL COMMITS', value: '500+', icon: <FiGitCommit /> },
+    { label: 'PULL REQUESTS', value: '30+', icon: <FiGitPullRequest /> },
+    { label: 'PROJECT DEPLOYS', value: '12+', icon: <FiStar /> },
   ];
 
   useGSAP((gsap) => {
@@ -40,7 +40,7 @@ const Github = () => {
         <div ref={headerRef} className="section-header" style={{ opacity: 0 }}>
           <div className="section-category">// 05. OPEN SOURCE</div>
           <h2 className="section-title">GITHUB ACTIVITY</h2>
-          <p className="section-subtitle">Consistent contributions and a growing open-source presence.</p>
+          <p className="section-subtitle">Consistent contributions and active web development repository management.</p>
         </div>
 
         <div ref={cardRef} className="card" style={{ padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.25rem', opacity: 0 }}>
@@ -54,15 +54,15 @@ const Github = () => {
                   fontSize: '1.2rem', color: 'white', flexShrink: 0,
                 }}><FiGithub /></div>
                 <div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1rem', fontWeight: 700 }}>@Jeet-827</div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.1em' }}>OPEN SOURCE CONTRIBUTOR</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1rem', fontWeight: 700 }}>@hadiyakishor01</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.1em' }}>MERN DEVELOPER & CONTRIBUTOR</div>
                 </div>
               </div>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-                Actively maintaining full-stack repositories, contributing to the ecosystem,
-                and shipping production-grade code consistently.
+                Actively maintaining full-stack repositories, exploring modern web frameworks,
+                and shipping production-ready web applications.
               </p>
-              <a href="https://github.com/Jeet-827" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/hadiyakishor01" target="_blank" rel="noopener noreferrer"
                 className="btn btn-dark interactive">
                 <FiGithub /> VISIT PROFILE
               </a>

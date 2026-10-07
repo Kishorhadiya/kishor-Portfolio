@@ -32,6 +32,12 @@ const ProjectCard = ({ project }) => {
     };
   }, []);
 
+  const live = project.liveDemo || project.liveUrl;
+  const git = project.github || project.githubUrl;
+  const techs = project.technologies || project.techStack || [];
+  const desc = project.description || project.shortDesc;
+  const badge = project.badge || project.category;
+
   return (
     <div ref={cardRef} className="card interactive" style={{
       borderRadius: '1.25rem', overflow: 'hidden',
@@ -48,7 +54,7 @@ const ProjectCard = ({ project }) => {
             fontFamily: 'var(--font-mono)', fontSize: '0.6rem', letterSpacing: '0.15em',
             color: 'var(--text)', padding: '0.3rem 0.7rem', borderRadius: '100px',
             border: '1px solid var(--border-strong)', background: 'white',
-          }}>{project.badge}</span>
+          }}>{badge}</span>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-dim)' }}>
             {project.number}
           </span>
@@ -75,25 +81,29 @@ const ProjectCard = ({ project }) => {
             <FiArrowUpRight style={{ color: 'var(--text-dim)', flexShrink: 0 }} />
           </h3>
           <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-            {project.description}
+            {desc}
           </p>
         </div>
 
         <div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1.25rem' }}>
-            {project.technologies.map((tech, i) => (
+            {techs.map((tech, i) => (
               <span key={i} className="tag">{tech}</span>
             ))}
           </div>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', paddingTop: '1rem', borderTop: '1px solid var(--border)' }}>
-            <a href={project.liveDemo} target="_blank" rel="noopener noreferrer"
-              className="btn btn-dark interactive" style={{ fontSize: '0.65rem', padding: '0.55rem 1.1rem' }}>
-              <FiExternalLink /> LIVE DEMO
-            </a>
-            <a href={project.github} target="_blank" rel="noopener noreferrer"
-              className="btn btn-outline interactive" style={{ fontSize: '0.65rem', padding: '0.55rem 1.1rem' }}>
-              <FiGithub /> GITHUB
-            </a>
+            {live && (
+              <a href={live} target="_blank" rel="noopener noreferrer"
+                className="btn btn-dark interactive" style={{ fontSize: '0.65rem', padding: '0.55rem 1.1rem' }}>
+                <FiExternalLink /> LIVE DEMO
+              </a>
+            )}
+            {git && (
+              <a href={git} target="_blank" rel="noopener noreferrer"
+                className="btn btn-outline interactive" style={{ fontSize: '0.65rem', padding: '0.55rem 1.1rem' }}>
+                <FiGithub /> GITHUB
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -131,7 +141,7 @@ const Projects = () => {
           <div className="section-category">// 02. FEATURED PORTFOLIO</div>
           <h2 className="section-title">SELECTED WORK</h2>
           <p className="section-subtitle">
-            Full-stack web applications with clean solutions, robust auth, and AI integration.
+            Full-stack web applications with component-based React architecture, robust auth, and clean RESTful APIs.
           </p>
         </div>
 

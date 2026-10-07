@@ -10,7 +10,7 @@ const About = () => {
   const statsRef   = useRef(null);
   const lineRef    = useRef(null);
 
-  const mainTech = ['React', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Redis', 'Docker', 'AI / GenAI'];
+  const mainTech = ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript (ES6+)', 'Tailwind CSS', 'RESTful APIs', 'JWT Auth', 'MySQL', 'Mongoose', 'Git', 'Vercel', 'Render'];
 
   useGSAP((gsap) => {
     /* ── header reveal ── */
@@ -62,7 +62,7 @@ const About = () => {
         <div ref={headerRef} className="section-header" style={{ opacity: 0 }}>
           <div className="section-category">// 01. PHILOSOPHY</div>
           <h2 className="section-title">ABOUT ME</h2>
-          <p className="section-subtitle">I build end-to-end web applications that are fast, secure, and scalable.</p>
+          <p className="section-subtitle">I build responsive, full-stack web applications with modern architecture.</p>
         </div>
 
         {/* Animated rule */}
@@ -74,14 +74,15 @@ const About = () => {
           {/* Text */}
           <div ref={textRef}>
             <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 1.9, marginBottom: '1.5rem' }}>
-              As a full-stack developer with a passion for engineering clean, maintainable
-              systems, I specialize in the MERN stack extended with PostgreSQL, Redis, and
-              Docker for production-grade applications. From building agriculture platforms
-              to crafting secure authentication systems, I focus on shipping impactful products.
+              I am a MERN Stack Developer with hands-on experience building responsive and full-stack
+              web applications using React.js, Node.js, Express.js, MongoDB, REST APIs, and JWT authentication.
+              Experienced in component-based UI development, API integration, database design, authentication,
+              and deploying applications using modern cloud platforms like Vercel and Render.
             </p>
             <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 1.9, marginBottom: '2rem' }}>
-              Currently exploring GenAI and LLM integrations to push the boundaries of
-              what web applications can do.
+              Holding a Bachelor of Computer Applications (BCA) from T.N. Rao Institute (82.55%), I am seeking
+              Software Engineer / React.js Developer opportunities to contribute to real-world products and continue
+              growing as a full-stack developer.
             </p>
 
             <h4 style={{

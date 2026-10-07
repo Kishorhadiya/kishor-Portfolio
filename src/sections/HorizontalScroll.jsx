@@ -8,10 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
    Horizontal Section Phrases
 ──────────────────────────────────────────────── */
 const PHRASES = [
-  { text: 'CRAFTING SEAMLESS', sub: 'DIGITAL EXPERIENCES' },
+  { text: 'CRAFTING SEAMLESS', sub: 'MERN & REACT.JS EXPERIENCES' },
   { text: 'INNOVATIVE', sub: 'ARCHITECTURE & CLEAN CODE' },
-  { text: 'HIGH PERFORMANCE', sub: 'FULL-STACK WEB APPS' },
-  { text: 'MODERN TECH STACK', sub: 'SCALABLE SYSTEMS' },
+  { text: 'HIGH PERFORMANCE', sub: 'RESPONSIVE FULL-STACK APPS' },
+  { text: 'MODERN TECH STACK', sub: 'RESTFUL APIS & SECURE AUTH' },
 ];
 
 const HorizontalScroll = () => {

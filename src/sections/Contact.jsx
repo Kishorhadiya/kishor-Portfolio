@@ -22,9 +22,9 @@ const Contact = () => {
   }, []);
 
   const socialLinks = [
-    { label: 'GitHub', href: 'https://github.com/Jeet-827', icon: <FiGithub size={18} /> },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ranpariya-jeet-6965a42a6/', icon: <FiLinkedin size={18} /> },
-    { label: 'X (Twitter)', href: 'https://x.com/JRanpariya64513', icon: <FiTwitter size={18} /> },
+    { label: 'GitHub', href: 'https://github.com/hadiyakishor01', icon: <FiGithub size={18} /> },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/kishor-hadiya/', icon: <FiLinkedin size={18} /> },
+    { label: 'Email', href: 'mailto:hadiyakishor01@gmail.com', icon: <FiMail size={18} /> },
   ];
 
   return (
@@ -44,21 +44,21 @@ const Contact = () => {
             fontWeight: 900, lineHeight: 1.05, letterSpacing: '-0.04em',
             marginTop: '1rem', marginBottom: '1.5rem', color: 'white',
           }}>
-            HAVE A PROJECT
-            <br />IN MIND?
-            <br /><span style={{ color: 'rgba(255,255,255,0.4)' }}>LET'S BUILD IT.</span>
+            HAVE AN OPPORTUNITY
+            <br />OR PROJECT?
+            <br /><span style={{ color: 'rgba(255,255,255,0.4)' }}>LET'S CONNECT.</span>
           </h2>
 
           <p className="contact-animate" style={{
             fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)', color: 'rgba(255,255,255,0.5)',
             maxWidth: '560px', lineHeight: 1.8, marginBottom: '2.5rem',
           }}>
-            I'm currently available for full-stack engineering roles, freelance
-            opportunities, and technical collaborations.
+            I'm actively seeking Software Engineer / React.js Developer / Full-Stack Developer
+            roles and open to technical discussions.
           </p>
 
           <div className="contact-animate" style={{ marginBottom: '3rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="mailto:ranpariyajeet27@gmail.com?subject=Project%20Inquiry%20-%20dev.RJ"
+            <a href="mailto:hadiyakishor01@gmail.com?subject=Job%20Opportunity%20-%20Kishor%20Hadiya"
               className="btn btn-white btn-lg interactive" style={{ gap: '0.75rem' }}>
               <FiMail size={18} /> EMAIL ME <FiArrowUpRight />
             </a>

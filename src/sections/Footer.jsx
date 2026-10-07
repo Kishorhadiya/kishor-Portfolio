@@ -21,21 +21,20 @@ const Footer = () => {
             display: 'flex', alignItems: 'center', gap: '0.4rem',
           }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--text)' }} />
-            dev.RJ
+            Kishor Hadiya
           </div>
           <div style={{
             fontFamily: 'var(--font-mono)', fontSize: '0.55rem',
             color: 'var(--text-dim)', letterSpacing: '0.1em',
           }}>
-            © {new Date().getFullYear()} JEET RANPARIYA. REACT + GSAP + LOCOMOTIVE.
+            © {new Date().getFullYear()} KISHOR HADIYA. MERN STACK DEVELOPER.
           </div>
         </div>
 
         <div style={{ display: 'flex', gap: '0.75rem' }}>
           {[
-            { icon: <FiGithub />, href: 'https://github.com/Jeet-827' },
-            { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/ranpariya-jeet-6965a42a6/' },
-            { icon: <FiTwitter />, href: 'https://x.com/JRanpariya64513' },
+            { icon: <FiGithub />, href: 'https://github.com/hadiyakishor01' },
+            { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/kishor-hadiya/' },
           ].map((link, i) => (
             <a key={i} href={link.href} target="_blank" rel="noopener noreferrer"
               className="interactive" style={{

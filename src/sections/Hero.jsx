@@ -138,7 +138,7 @@ const Hero = () => {
                 wordBreak: 'break-word',
               }}
             >
-              JEET<br />RANPARIYA
+              KISHOR<br />HADIYA
             </div>
             <div
               ref={roleRef}
@@ -149,7 +149,7 @@ const Hero = () => {
                 marginTop: '1rem', opacity: 0,
               }}
             >
-              FULL STACK DEVELOPER
+              MERN STACK DEVELOPER
             </div>
           </h1>
 
@@ -157,8 +157,8 @@ const Hero = () => {
             fontSize: 'clamp(1rem,1.5vw,1.15rem)', color: 'var(--text-secondary)',
             maxWidth: '500px', lineHeight: 1.8, marginBottom: '2rem', opacity: 0,
           }}>
-            Building modern, scalable web applications with React, Node.js,
-            PostgreSQL, MongoDB, Redis, and GenAI integrations.
+            Building responsive and full-stack web applications with React.js,
+            Node.js, Express.js, MongoDB, REST APIs, and JWT authentication.
           </p>
 
           <div ref={buttonsRef} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -174,7 +174,7 @@ const Hero = () => {
               className="btn btn-outline interactive" style={{ gap: '0.5rem' }}>
               <FiFileText /> RESUME
             </a>
-            <a href="https://github.com/Jeet-827" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/hadiyakishor01" target="_blank" rel="noopener noreferrer"
               className="btn btn-outline interactive">
               <FiGithub /> GITHUB
             </a>
@@ -195,17 +195,17 @@ const Hero = () => {
               <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#eee' }} />
             </div>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-dim)' }}>
-              architecture.config
+              developer.config
             </span>
           </div>
 
           {/* Stats */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem', marginBottom: '1.25rem' }}>
             {[
-              { label: 'EXPERIENCE', value: '2+ Years', bold: true },
-              { label: 'PROJECTS', value: '20+ Built' },
+              { label: 'EDUCATION', value: 'BCA (82.5%)', bold: true },
+              { label: 'PROJECTS', value: '6+ Built' },
               { label: 'STACK', value: 'MERN + SQL' },
-              { label: 'FOCUS', value: 'GenAI Ready', bold: true },
+              { label: 'LOCATION', value: 'Ahmedabad, IN', bold: true },
             ].map((item, i) => (
               <div key={i} className="interactive" style={{
                 padding: '0.9rem', borderRadius: '0.75rem',
