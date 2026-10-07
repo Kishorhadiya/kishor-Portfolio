@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { FiGithub, FiArrowDown, FiArrowUpRight, FiFileText } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiArrowDown, FiArrowUpRight, FiFileText } from 'react-icons/fi';
 import { useGSAP } from '../hooks/useGSAP';
 import { useLocomotiveScroll } from '../context/SmoothScroll';
 
@@ -174,8 +174,12 @@ const Hero = () => {
               className="btn btn-outline interactive" style={{ gap: '0.5rem' }}>
               <FiFileText /> RESUME
             </a>
-            <a href="https://github.com/hadiyakishor01" target="_blank" rel="noopener noreferrer"
-              className="btn btn-outline interactive">
+            <a href="https://www.linkedin.com/in/kishorhadiya/" target="_blank" rel="noopener noreferrer"
+              className="btn btn-outline interactive" style={{ gap: '0.5rem' }}>
+              <FiLinkedin /> LINKEDIN
+            </a>
+            <a href="https://github.com/Kishorhadiya" target="_blank" rel="noopener noreferrer"
+              className="btn btn-outline interactive" style={{ gap: '0.5rem' }}>
               <FiGithub /> GITHUB
             </a>
           </div>

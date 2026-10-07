@@ -54,7 +54,7 @@ const Github = () => {
                   fontSize: '1.2rem', color: 'white', flexShrink: 0,
                 }}><FiGithub /></div>
                 <div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1rem', fontWeight: 700 }}>@hadiyakishor01</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1rem', fontWeight: 700 }}>@Kishorhadiya</div>
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-dim)', letterSpacing: '0.1em' }}>MERN DEVELOPER & CONTRIBUTOR</div>
                 </div>
               </div>
@@ -62,10 +62,16 @@ const Github = () => {
                 Actively maintaining full-stack repositories, exploring modern web frameworks,
                 and shipping production-ready web applications.
               </p>
-              <a href="https://github.com/hadiyakishor01" target="_blank" rel="noopener noreferrer"
-                className="btn btn-dark interactive">
-                <FiGithub /> VISIT PROFILE
-              </a>
+              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                <a href="https://github.com/Kishorhadiya" target="_blank" rel="noopener noreferrer"
+                  className="btn btn-dark interactive">
+                  <FiGithub /> VISIT PROFILE
+                </a>
+                <a href="https://github.com/Kishorhadiya/kishor-Portfolio" target="_blank" rel="noopener noreferrer"
+                  className="btn btn-outline interactive">
+                  <FiCode /> PORTFOLIO REPO
+                </a>
+              </div>
             </div>
 
             {/* Stats */}

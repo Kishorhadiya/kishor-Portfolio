@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { FiFileText, FiArrowUpRight } from 'react-icons/fi';
+import { FiFileText, FiArrowUpRight, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { statistics } from '../data/skills';
 import { useGSAP } from '../hooks/useGSAP';
 
@@ -95,7 +95,7 @@ const About = () => {
               ))}
             </div>
 
-            <div style={{ marginTop: '2rem' }}>
+            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a
                 href="/resume.pdf"
                 target="_blank"
@@ -104,6 +104,24 @@ const About = () => {
                 style={{ gap: '0.6rem' }}
               >
                 <FiFileText size={16} /> VIEW RESUME <FiArrowUpRight />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kishorhadiya/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline interactive"
+                style={{ gap: '0.6rem' }}
+              >
+                <FiLinkedin size={16} /> LINKEDIN <FiArrowUpRight />
+              </a>
+              <a
+                href="https://github.com/Kishorhadiya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline interactive"
+                style={{ gap: '0.6rem' }}
+              >
+                <FiGithub size={16} /> GITHUB <FiArrowUpRight />
               </a>
             </div>
           </div>

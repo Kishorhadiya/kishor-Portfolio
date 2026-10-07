@@ -33,10 +33,11 @@ const Footer = () => {
 
         <div style={{ display: 'flex', gap: '0.75rem' }}>
           {[
-            { icon: <FiGithub />, href: 'https://github.com/hadiyakishor01' },
-            { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/kishor-hadiya/' },
+            { icon: <FiGithub />, href: 'https://github.com/Kishorhadiya', label: 'GitHub' },
+            { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/kishorhadiya/', label: 'LinkedIn' },
           ].map((link, i) => (
             <a key={i} href={link.href} target="_blank" rel="noopener noreferrer"
+              aria-label={link.label}
               className="interactive" style={{
                 width: 36, height: 36, borderRadius: '50%',
                 border: '1px solid var(--border)', display: 'flex',

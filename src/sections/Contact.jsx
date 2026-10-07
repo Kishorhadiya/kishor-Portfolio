@@ -22,8 +22,8 @@ const Contact = () => {
   }, []);
 
   const socialLinks = [
-    { label: 'GitHub', href: 'https://github.com/hadiyakishor01', icon: <FiGithub size={18} /> },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/kishor-hadiya/', icon: <FiLinkedin size={18} /> },
+    { label: 'GitHub', href: 'https://github.com/Kishorhadiya', icon: <FiGithub size={18} /> },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/kishorhadiya/', icon: <FiLinkedin size={18} /> },
     { label: 'Email', href: 'mailto:hadiyakishor01@gmail.com', icon: <FiMail size={18} /> },
   ];
 
