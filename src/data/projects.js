@@ -162,8 +162,8 @@ export const projectsData = [
     ],
     github: "https://github.com/Kishorhadiya/WebSocketSocketio.git",
     githubUrl: "https://github.com/Kishorhadiya/WebSocketSocketio.git",
-    liveDemo: "https://websocketsocketio-frontend.onrender.com/",
-    liveUrl: "https://websocketsocketio-frontend.onrender.com/",
+    liveDemo: "https://chatapplication-frontend-m3jr.onrender.com/login",
+    liveUrl: "https://chatapplication-frontend-m3jr.onrender.com/login",
     highlights: [
       "Built a real-time chat application using Socket.IO for instant message delivery.",
       "Implemented private one-to-one messaging between authenticated users.",
