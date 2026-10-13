@@ -91,9 +91,9 @@ export const projectsData = [
     year: "2026",
   },
   {
-    id: "treo-tech-store",
+    id: "NEXORA Tech Store",
     number: "PROJECT 04",
-    title: "TREO.TECH STORE – E-Commerce Platform",
+    title: "NEXORA Tech Store – E-Commerce Platform",
     category: "MERN Stack",
     badge: "E-Commerce",
     featured: true,
