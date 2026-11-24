@@ -17,19 +17,19 @@ const Github = () => {
   useGSAP((gsap) => {
     gsap.fromTo(headerRef.current, { opacity: 0, y: 40 }, {
       opacity: 1, y: 0, duration: 0.8,
-      scrollTrigger: { trigger: headerRef.current, start: 'top 85%' },
+      scrollTrigger: { trigger: headerRef.current, start: 'top 90%', once: true },
     });
 
     gsap.fromTo(cardRef.current, { opacity: 0, y: 50, scale: 0.97 }, {
       opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out',
-      scrollTrigger: { trigger: cardRef.current, start: 'top 85%' },
+      scrollTrigger: { trigger: cardRef.current, start: 'top 90%', once: true },
     });
 
     if (statsRef.current) {
       gsap.fromTo(Array.from(statsRef.current.children),
         { opacity: 0, y: 30, scale: 0.9 },
         { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.08, ease: 'back.out(1.5)',
-          scrollTrigger: { trigger: statsRef.current, start: 'top 85%' } }
+          scrollTrigger: { trigger: statsRef.current, start: 'top 90%', once: true } }
       );
     }
   }, []);
@@ -37,13 +37,13 @@ const Github = () => {
   return (
     <section id="github" data-scroll-section className="section section-divider" style={{ overflow: 'hidden' }}>
       <div className="container">
-        <div ref={headerRef} className="section-header" style={{ opacity: 0 }}>
+        <div ref={headerRef} className="section-header">
           <div className="section-category">// 05. OPEN SOURCE</div>
           <h2 className="section-title">GITHUB ACTIVITY</h2>
           <p className="section-subtitle">Consistent contributions and active web development repository management.</p>
         </div>
 
-        <div ref={cardRef} className="card" style={{ padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.25rem', opacity: 0 }}>
+        <div ref={cardRef} className="card" style={{ padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.25rem' }}>
           <div className="github-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', alignItems: 'center' }}>
             {/* Info */}
             <div>
@@ -66,10 +66,6 @@ const Github = () => {
                 <a href="https://github.com/Kishorhadiya" target="_blank" rel="noopener noreferrer"
                   className="btn btn-dark interactive">
                   <FiGithub /> VISIT PROFILE
-                </a>
-                <a href="https://github.com/Kishorhadiya/kishor-Portfolio" target="_blank" rel="noopener noreferrer"
-                  className="btn btn-outline interactive">
-                  <FiCode /> PORTFOLIO REPO
                 </a>
               </div>
             </div>

@@ -306,7 +306,6 @@ ul, ol { list-style: none; }
   width: max-content;
   white-space: nowrap;
   gap: 4vw;
-  padding-left: 100vw;
   color: var(--text-inverse);
   will-change: transform;
 }

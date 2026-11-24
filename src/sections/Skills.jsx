@@ -10,19 +10,19 @@ const Skills = () => {
   useGSAP((gsap) => {
     gsap.fromTo(headerRef.current, { opacity: 0, y: 40 }, {
       opacity: 1, y: 0, duration: 0.8,
-      scrollTrigger: { trigger: headerRef.current, start: 'top 85%' },
+      scrollTrigger: { trigger: headerRef.current, start: 'top 90%', once: true },
     });
 
     gsap.fromTo(marqueeRef.current, { opacity: 0, x: -80 }, {
       opacity: 1, x: 0, duration: 1,
-      scrollTrigger: { trigger: marqueeRef.current, start: 'top 90%' },
+      scrollTrigger: { trigger: marqueeRef.current, start: 'top 92%', once: true },
     });
 
     if (gridRef.current) {
       gsap.fromTo(Array.from(gridRef.current.children),
         { opacity: 0, y: 60, scale: 0.96 },
         { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
-          scrollTrigger: { trigger: gridRef.current, start: 'top 80%' } }
+          scrollTrigger: { trigger: gridRef.current, start: 'top 85%', once: true } }
       );
     }
   }, []);
@@ -38,7 +38,7 @@ const Skills = () => {
   return (
     <section id="skills" data-scroll-section className="section section-dark" style={{ overflow: 'hidden' }}>
       <div className="container">
-        <div ref={headerRef} className="section-header" style={{ opacity: 0 }}>
+        <div ref={headerRef} className="section-header">
           <div className="section-category" style={{ color: 'rgba(255,255,255,0.4)' }}>// 03. TECH ARSENAL</div>
           <h2 className="section-title">SKILLS & TOOLS</h2>
           <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.5)' }}>
@@ -52,7 +52,6 @@ const Skills = () => {
           margin: '0 calc(-1 * clamp(1.5rem, 5vw, 3rem)) 3rem',
           borderTop: '1px solid rgba(255,255,255,0.06)',
           borderBottom: '1px solid rgba(255,255,255,0.06)',
-          opacity: 0,
         }}>
           <div className="marquee-track">
             {[...marqueeSkills, ...marqueeSkills].map((skill, i) => (

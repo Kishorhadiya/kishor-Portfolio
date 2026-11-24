@@ -85,10 +85,4 @@ export const journeyTimeline = [
     description: "Graduating with 82.55% aggregate; actively building production-grade MERN web applications and seeking React.js / Software Engineer opportunities.",
     status: "Active Focus",
   },
-  {
-    year: "2027+",
-    title: "Distributed Systems & Next-Gen Tech",
-    description: "Continuing to grow as a full-stack engineer, architecting scalable cloud platforms, microservices, and modern web software.",
-    status: "Future Goal",
-  },
 ];

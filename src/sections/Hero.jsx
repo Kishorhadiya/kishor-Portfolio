@@ -117,7 +117,7 @@ const Hero = () => {
       }} />
 
       {/* Status badge */}
-      <div ref={statusRef} style={{ marginBottom: '2.5rem', opacity: 0 }}>
+      <div ref={statusRef} style={{ marginBottom: '2.5rem' }}>
         <div className="status-badge">
           <span className="pulse-dot" />
           AVAILABLE FOR WORK — 2026
@@ -134,7 +134,7 @@ const Hero = () => {
               style={{
                 fontFamily: 'var(--font-display)', fontWeight: 900,
                 fontSize: 'clamp(2.3rem,7.5vw,7rem)', lineHeight: 0.95,
-                letterSpacing: '-0.05em', color: 'var(--text)', opacity: 0,
+                letterSpacing: '-0.05em', color: 'var(--text)',
                 wordBreak: 'break-word',
               }}
             >
@@ -146,7 +146,7 @@ const Hero = () => {
                 fontFamily: 'var(--font-mono)', fontWeight: 600,
                 fontSize: 'clamp(0.8rem,1.8vw,1.1rem)',
                 letterSpacing: '0.2em', color: 'var(--text-muted)',
-                marginTop: '1rem', opacity: 0,
+                marginTop: '1rem',
               }}
             >
               MERN STACK DEVELOPER
@@ -155,7 +155,7 @@ const Hero = () => {
 
           <p ref={descRef} style={{
             fontSize: 'clamp(1rem,1.5vw,1.15rem)', color: 'var(--text-secondary)',
-            maxWidth: '500px', lineHeight: 1.8, marginBottom: '2rem', opacity: 0,
+            maxWidth: '500px', lineHeight: 1.8, marginBottom: '2rem',
           }}>
             Building responsive and full-stack web applications with React.js,
             Node.js, Express.js, MongoDB, REST APIs, and JWT authentication.
@@ -186,7 +186,7 @@ const Hero = () => {
         </div>
 
         {/* Right: Info Card with 3D tilt */}
-        <div ref={cardRef} className="card" style={{ padding: '2rem', opacity: 0, transformStyle: 'preserve-3d' }}>
+        <div ref={cardRef} className="card" style={{ padding: '2rem', transformStyle: 'preserve-3d' }}>
           {/* Terminal Header */}
           <div style={{
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -243,7 +243,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll CTA */}
-      <div ref={scrollRef} style={{ marginTop: 'clamp(3rem,8vh,5rem)', display: 'flex', justifyContent: 'center', opacity: 0 }}>
+      <div ref={scrollRef} style={{ marginTop: 'clamp(3rem,8vh,5rem)', display: 'flex', justifyContent: 'center' }}>
         <button onClick={() => {
           const t = document.getElementById('about');
           if (locoScroll) locoScroll.scrollTo(t);

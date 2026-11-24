@@ -7,16 +7,16 @@ const Contact = () => {
 
   useGSAP((gsap) => {
     gsap.fromTo(contentRef.current,
-      { opacity: 0, y: 80, scale: 0.96 },
-      { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: 'power3.out',
-        scrollTrigger: { trigger: contentRef.current, start: 'top 85%' } }
+      { opacity: 0, y: 60, scale: 0.97 },
+      { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out',
+        scrollTrigger: { trigger: contentRef.current, start: 'top 92%', once: true } }
     );
 
     const els = contentRef.current?.querySelectorAll('.contact-animate');
     if (els) {
       gsap.fromTo(els, { opacity: 0, y: 25 },
         { opacity: 1, y: 0, duration: 0.7, stagger: 0.08, ease: 'power3.out',
-          scrollTrigger: { trigger: contentRef.current, start: 'top 80%' } }
+          scrollTrigger: { trigger: contentRef.current, start: 'top 92%', once: true } }
       );
     }
   }, []);
@@ -33,7 +33,7 @@ const Contact = () => {
       <div className="container">
         <div ref={contentRef} style={{
           textAlign: 'center', display: 'flex', flexDirection: 'column',
-          alignItems: 'center', opacity: 0,
+          alignItems: 'center',
         }}>
           <div className="section-category contact-animate" style={{ color: 'rgba(255,255,255,0.4)' }}>
             // 06. GET IN TOUCH

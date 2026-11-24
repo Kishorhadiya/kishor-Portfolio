@@ -29,7 +29,7 @@ const HorizontalScroll = () => {
 
     const mm = gsap.matchMedia();
 
-    // ── Desktop: Pinned scrub animation ──
+    // ── Desktop: Silky Pinned Scrub Animation ──
     mm.add('(min-width: 769px)', () => {
       if (!track) return;
       const getTravelDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
@@ -41,11 +41,13 @@ const HorizontalScroll = () => {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: () => `+=${getTravelDistance() + 300}`,
+          end: () => `+=${getTravelDistance() + 200}`,
           pin: true,
-          scrub: 1.2,
+          scrub: 1,
           invalidateOnRefresh: true,
-          anticipatePin: 1,
+          anticipatePin: 0,
+          fastScrollEnd: true,
+          preventOverlaps: true,
           onUpdate: (self) => {
             if (numRef.current) {
               const progressVal = Math.round(self.progress * 100);
@@ -55,44 +57,67 @@ const HorizontalScroll = () => {
         },
       });
 
-      /* 2. Character fly-in animations */
-      cardRefs.current.forEach((card) => {
+      /* 2. Uniform Brightness & Motion for All Cards */
+      cardRefs.current.forEach((card, idx) => {
         if (!card) return;
-        const chars = card.querySelectorAll('.h-char');
+        const title = card.querySelector('.h-title');
         const sub   = card.querySelector('.h-sub');
 
-        if (chars.length) {
-          gsap.fromTo(chars,
-            { opacity: 0, y: 50, rotateZ: () => gsap.utils.random(-15, 15), scale: 0.85 },
-            {
-              opacity: 1, y: 0, rotateZ: 0, scale: 1, ease: 'back.out(1.6)', stagger: 0.03,
-              scrollTrigger: {
-                trigger: card,
-                containerAnimation: hTween,
-                start: 'left 88%',
-                end: 'left 42%',
-                scrub: 1,
-              },
-            }
-          );
-        }
+        // All cards maintain full, uniform 100% light brightness (no dimmed/less-light cards)
+        gsap.set([title, sub], { opacity: 1 });
 
-        if (sub) {
-          gsap.fromTo(sub,
-            { opacity: 0, y: 35 },
-            {
-              opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
-              scrollTrigger: {
-                trigger: card,
-                containerAnimation: hTween,
-                start: 'left 80%',
-                end: 'left 45%',
-                scrub: 1,
-              },
-            }
-          );
+        if (idx > 0) {
+          // Smooth glide-in on scroll without reducing opacity
+          if (title) {
+            gsap.fromTo(title,
+              { y: 25 },
+              {
+                y: 0,
+                ease: 'power2.out',
+                scrollTrigger: {
+                  trigger: card,
+                  containerAnimation: hTween,
+                  start: 'left 92%',
+                  end: 'left 52%',
+                  scrub: 0.8,
+                },
+              }
+            );
+          }
+
+          if (sub) {
+            gsap.fromTo(sub,
+              { y: 15 },
+              {
+                y: 0,
+                ease: 'power2.out',
+                scrollTrigger: {
+                  trigger: card,
+                  containerAnimation: hTween,
+                  start: 'left 88%',
+                  end: 'left 55%',
+                  scrub: 0.8,
+                },
+              }
+            );
+          }
         }
       });
+
+      /* 3. Subtle continuous spin on separators */
+      const separators = section.querySelectorAll('.h-separator');
+      if (separators.length) {
+        gsap.to(separators, {
+          rotate: 360,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: () => `+=${getTravelDistance() + 200}`,
+            scrub: 1,
+          },
+        });
+      }
     });
 
     // ── Mobile: Smooth vertical flow without viewport locking ──
@@ -100,12 +125,13 @@ const HorizontalScroll = () => {
       if (!mobileList) return;
       const items = Array.from(mobileList.children);
       gsap.fromTo(items,
-        { opacity: 0, y: 40 },
+        { opacity: 0, y: 30 },
         {
-          opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: 'power3.out',
+          opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: 'power2.out',
           scrollTrigger: {
             trigger: mobileList,
             start: 'top 85%',
+            once: true,
           },
         }
       );
@@ -122,25 +148,28 @@ const HorizontalScroll = () => {
       id="horizontal-scroll"
       style={{
         width: '100%',
+        height: '100vh',
         minHeight: '100vh',
         background: '#0a0a0a',
         position: 'relative',
         zIndex: 10,
         overflow: 'hidden',
+        display: 'flex',
+        alignItems: 'center',
       }}
     >
       {/* Decorative hairline borders */}
       <div
         style={{
           position: 'absolute', top: 0, left: 0, right: 0, height: 1,
-          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)',
           pointerEvents: 'none',
         }}
       />
       <div
         style={{
           position: 'absolute', bottom: 0, left: 0, right: 0, height: 1,
-          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)',
           pointerEvents: 'none',
         }}
       />
@@ -153,9 +182,9 @@ const HorizontalScroll = () => {
           top: '2.5rem',
           left: 'clamp(1.5rem, 5vw, 4rem)',
           fontFamily: 'var(--font-mono)',
-          fontSize: '0.62rem',
+          fontSize: '0.65rem',
           letterSpacing: '0.22em',
-          color: 'rgba(255,255,255,0.35)',
+          color: 'rgba(255,255,255,0.75)',
           display: 'flex',
           alignItems: 'center',
           gap: '0.6rem',
@@ -165,8 +194,8 @@ const HorizontalScroll = () => {
       >
         <span
           style={{
-            width: 6, height: 6, borderRadius: '50%', background: 'white',
-            display: 'inline-block', boxShadow: '0 0 8px rgba(255,255,255,0.6)',
+            width: 7, height: 7, borderRadius: '50%', background: '#ffffff',
+            display: 'inline-block', boxShadow: '0 0 10px rgba(255,255,255,0.8)',
           }}
         />
         HORIZONTAL SCROLL EXPERIENCE →
@@ -180,9 +209,9 @@ const HorizontalScroll = () => {
           top: '2.5rem',
           right: 'clamp(1.5rem, 5vw, 4rem)',
           fontFamily: 'var(--font-mono)',
-          fontSize: '0.62rem',
+          fontSize: '0.65rem',
           letterSpacing: '0.22em',
-          color: 'rgba(255,255,255,0.35)',
+          color: 'rgba(255,255,255,0.75)',
           display: 'flex',
           alignItems: 'center',
           gap: '0.5rem',
@@ -190,10 +219,28 @@ const HorizontalScroll = () => {
           zIndex: 20,
         }}
       >
-        <span ref={numRef} style={{ fontSize: '1rem', fontWeight: 800, color: 'white' }}>
+        <span ref={numRef} style={{ fontSize: '1.05rem', fontWeight: 800, color: '#ffffff' }}>
           000
         </span>
-        <span>/ 100</span>
+        <span style={{ color: 'rgba(255,255,255,0.7)' }}>/ 100</span>
+      </div>
+
+      {/* Desktop Indicator - Bottom Badge */}
+      <div
+        className="h-desktop-indicator"
+        style={{
+          position: 'absolute',
+          bottom: '2.5rem',
+          right: 'clamp(1.5rem, 5vw, 4rem)',
+          fontFamily: 'var(--font-mono)',
+          fontSize: '0.6rem',
+          letterSpacing: '0.22em',
+          color: 'rgba(255,255,255,0.65)',
+          pointerEvents: 'none',
+          zIndex: 20,
+        }}
+      >
+        GSAP PINNED TRACK · FLUID MOTION
       </div>
 
       {/* Desktop Pinned Moving Horizontal Track */}
@@ -201,16 +248,14 @@ const HorizontalScroll = () => {
         ref={trackRef}
         className="h-desktop-track"
         style={{
-          position: 'absolute',
-          top: '50%',
-          transform: 'translateY(-50%)',
           display: 'flex',
           alignItems: 'center',
-          gap: '12vw',
-          paddingLeft: '100vw',
-          paddingRight: '35vw',
+          gap: '10vw',
+          paddingLeft: 'clamp(2.5rem, 8vw, 6rem)',
+          paddingRight: 'clamp(4rem, 25vw, 20rem)',
           whiteSpace: 'nowrap',
           willChange: 'transform',
+          userSelect: 'none',
         }}
       >
         {PHRASES.map((phrase, idx) => (
@@ -226,31 +271,37 @@ const HorizontalScroll = () => {
               }}
             >
               <div
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.2em',
+                  color: 'rgba(255,255,255,0.7)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                }}
+              >
+                <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#ffffff' }} />
+                // 0{idx + 1}
+              </div>
+
+              <h2
                 className="h-title"
                 style={{
                   display: 'inline-block',
                   fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(3.5rem, 8vw, 9rem)',
+                  fontSize: 'clamp(3.5rem, 8vw, 8.5rem)',
                   fontWeight: 900,
                   letterSpacing: '-0.04em',
                   lineHeight: 1,
                   color: '#ffffff',
+                  margin: 0,
+                  opacity: 1,
+                  willChange: 'transform',
                 }}
               >
-                {phrase.text.split('').map((char, ci) => (
-                  <span
-                    key={ci}
-                    className="h-char"
-                    style={{
-                      display: 'inline-block',
-                      willChange: 'transform, opacity',
-                      transformOrigin: '50% 100%',
-                    }}
-                  >
-                    {char === ' ' ? '\u00A0' : char}
-                  </span>
-                ))}
-              </div>
+                {phrase.text}
+              </h2>
 
               <div
                 className="h-sub"
@@ -259,8 +310,10 @@ const HorizontalScroll = () => {
                   fontFamily: 'var(--font-mono)',
                   fontSize: 'clamp(0.85rem, 1.6vw, 1.4rem)',
                   letterSpacing: '0.24em',
-                  color: 'rgba(255,255,255,0.4)',
+                  color: 'rgba(255,255,255,0.85)',
                   paddingLeft: '0.12em',
+                  opacity: 1,
+                  willChange: 'transform',
                 }}
               >
                 {phrase.sub}
@@ -269,17 +322,21 @@ const HorizontalScroll = () => {
 
             {idx < PHRASES.length - 1 && (
               <div
+                className="h-separator"
                 style={{
                   display: 'inline-flex',
                   flexShrink: 0,
-                  width: 'clamp(48px, 5.5vw, 80px)',
-                  height: 'clamp(48px, 5.5vw, 80px)',
+                  width: 'clamp(48px, 5.5vw, 76px)',
+                  height: 'clamp(48px, 5.5vw, 76px)',
                   borderRadius: '50%',
-                  border: '1px solid rgba(255,255,255,0.15)',
+                  border: '1px solid rgba(255,255,255,0.35)',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: 'rgba(255,255,255,0.4)',
+                  color: '#ffffff',
                   fontSize: 'clamp(1.2rem, 2vw, 2rem)',
+                  background: 'rgba(255,255,255,0.06)',
+                  boxShadow: '0 0 20px rgba(255,255,255,0.1)',
+                  willChange: 'transform',
                 }}
               >
                 ✦
@@ -293,8 +350,8 @@ const HorizontalScroll = () => {
       <div className="h-mobile-layout">
         <div style={{
           display: 'flex', alignItems: 'center', gap: '0.6rem',
-          fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
-          letterSpacing: '0.2em', color: 'rgba(255,255,255,0.4)',
+          fontFamily: 'var(--font-mono)', fontSize: '0.7rem',
+          letterSpacing: '0.2em', color: 'rgba(255,255,255,0.75)',
           marginBottom: '1rem',
         }}>
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'white' }} />
@@ -308,13 +365,13 @@ const HorizontalScroll = () => {
               style={{
                 padding: '1.5rem',
                 borderRadius: '1rem',
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(255,255,255,0.15)',
               }}
             >
               <div style={{
-                fontFamily: 'var(--font-mono)', fontSize: '0.6rem',
-                letterSpacing: '0.15em', color: 'rgba(255,255,255,0.3)',
+                fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
+                letterSpacing: '0.15em', color: 'rgba(255,255,255,0.7)',
                 marginBottom: '0.5rem',
               }}>
                 // 0{idx + 1}
@@ -332,9 +389,9 @@ const HorizontalScroll = () => {
               </h3>
               <p style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: '0.75rem',
+                fontSize: '0.8rem',
                 letterSpacing: '0.15em',
-                color: 'rgba(255,255,255,0.5)',
+                color: 'rgba(255,255,255,0.85)',
               }}>
                 {phrase.sub}
               </p>
@@ -344,12 +401,23 @@ const HorizontalScroll = () => {
       </div>
 
       <style>{`
+        .h-title {
+          display: inline-block;
+          color: #ffffff !important;
+          opacity: 1 !important;
+        }
+        .h-sub {
+          display: inline-block;
+          color: rgba(255, 255, 255, 0.85) !important;
+          opacity: 1 !important;
+        }
         @media (max-width: 768px) {
           #horizontal-scroll {
             height: auto !important;
             min-height: auto !important;
             padding: 4.5rem 1.25rem !important;
             overflow: visible !important;
+            display: block !important;
           }
           .h-desktop-track,
           .h-desktop-indicator {

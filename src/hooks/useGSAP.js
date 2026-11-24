@@ -13,18 +13,19 @@ export function useGSAP(animationCallback, deps = []) {
   const contextRef = useRef(null);
 
   useEffect(() => {
-    // Small delay to ensure locomotive scroll is initialized
-    const timer = setTimeout(() => {
-      const ctx = gsap.context(() => {
+    let ctx;
+    const rafId = requestAnimationFrame(() => {
+      ctx = gsap.context(() => {
         animationCallback(gsap, ScrollTrigger);
       });
       contextRef.current = ctx;
-    }, 100);
+      ScrollTrigger.refresh();
+    });
 
     return () => {
-      clearTimeout(timer);
-      if (contextRef.current) {
-        contextRef.current.revert();
+      cancelAnimationFrame(rafId);
+      if (ctx) {
+        ctx.revert();
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

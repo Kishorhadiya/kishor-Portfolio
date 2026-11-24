@@ -121,7 +121,7 @@ const Projects = () => {
     gsap.fromTo(headerRef.current,
       { opacity: 0, clipPath: 'inset(0 100% 0 0)' },
       { opacity: 1, clipPath: 'inset(0 0% 0 0)', duration: 1, ease: 'power3.out',
-        scrollTrigger: { trigger: headerRef.current, start: 'top 85%' } }
+        scrollTrigger: { trigger: headerRef.current, start: 'top 88%', once: true } }
     );
 
     /* cards staggered flip-in */
@@ -129,7 +129,7 @@ const Projects = () => {
       gsap.fromTo(Array.from(gridRef.current.children),
         { opacity: 0, y: 80, rotateX: 8, scale: 0.96 },
         { opacity: 1, y: 0, rotateX: 0, scale: 1, duration: 0.9, stagger: 0.15, ease: 'power3.out',
-          scrollTrigger: { trigger: gridRef.current, start: 'top 80%' } }
+          scrollTrigger: { trigger: gridRef.current, start: 'top 85%', once: true } }
       );
     }
   }, []);
@@ -137,7 +137,7 @@ const Projects = () => {
   return (
     <section id="work" data-scroll-section className="section section-divider" style={{ overflow: 'hidden' }}>
       <div className="container">
-        <div ref={headerRef} className="section-header" style={{ opacity: 0 }}>
+        <div ref={headerRef} className="section-header">
           <div className="section-category">// 02. FEATURED PORTFOLIO</div>
           <h2 className="section-title">SELECTED WORK</h2>
           <p className="section-subtitle">

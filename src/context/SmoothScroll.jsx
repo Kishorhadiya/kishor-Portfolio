@@ -55,7 +55,7 @@ export function SmoothScrollProvider({ children }) {
     };
 
     gsap.ticker.add(tickerUpdate);
-    gsap.ticker.lagSmoothing(500, 33); // Graceful recovery from dropped frames
+    gsap.ticker.lagSmoothing(0); // Prevent Lenis + GSAP ScrollTrigger desync during scrub
 
     // Ensure ScrollTrigger defaults to window
     ScrollTrigger.defaults({ scroller: window });
@@ -63,6 +63,15 @@ export function SmoothScrollProvider({ children }) {
     // Refresh ScrollTrigger after initial mount and layout calculations
     const t1 = setTimeout(() => ScrollTrigger.refresh(), 200);
     const t2 = setTimeout(() => ScrollTrigger.refresh(), 800);
+
+    // Refresh ScrollTrigger when fonts finish loading and on window load
+    if (typeof document !== 'undefined' && document.fonts) {
+      document.fonts.ready.then(() => {
+        ScrollTrigger.refresh();
+      });
+    }
+    const onLoad = () => ScrollTrigger.refresh();
+    window.addEventListener('load', onLoad);
 
     // Debounce resize to prevent mobile Chrome address bar collapse from freezing scroll
     let lastWidth = window.innerWidth;
@@ -83,6 +92,7 @@ export function SmoothScrollProvider({ children }) {
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(resizeTimer);
+      window.removeEventListener('load', onLoad);
       window.removeEventListener('resize', onResize);
       gsap.ticker.remove(tickerUpdate);
       l.destroy();

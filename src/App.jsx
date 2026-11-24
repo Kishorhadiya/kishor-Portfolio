@@ -22,7 +22,7 @@ function App() {
       <Navbar />
 
       {/* Main Content */}
-      <main style={{ width: '100%', overflowX: 'hidden', position: 'relative' }}>
+      <main style={{ width: '100%', position: 'relative' }}>
         <Hero />
         <About />
         <Projects />

@@ -17,14 +17,14 @@ const About = () => {
     gsap.fromTo(headerRef.current,
       { opacity: 0, x: -60 },
       { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
-        scrollTrigger: { trigger: headerRef.current, start: 'top 85%' } }
+        scrollTrigger: { trigger: headerRef.current, start: 'top 88%', once: true } }
     );
 
     /* ── line draw ── */
     gsap.fromTo(lineRef.current,
       { scaleX: 0, transformOrigin: 'left' },
       { scaleX: 1, duration: 1.4, ease: 'power3.inOut',
-        scrollTrigger: { trigger: headerRef.current, start: 'top 80%' } }
+        scrollTrigger: { trigger: headerRef.current, start: 'top 85%', once: true } }
     );
 
     /* ── text paragraphs ── */
@@ -32,7 +32,7 @@ const About = () => {
       gsap.fromTo(Array.from(textRef.current.querySelectorAll('p')),
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-          scrollTrigger: { trigger: textRef.current, start: 'top 82%' } }
+          scrollTrigger: { trigger: textRef.current, start: 'top 88%', once: true } }
       );
     }
 
@@ -41,7 +41,7 @@ const About = () => {
       gsap.fromTo(Array.from(techRef.current.children),
         { opacity: 0, scale: 0.7, y: 20, rotation: gsap.utils.random(-6, 6) },
         { opacity: 1, scale: 1, y: 0, rotation: 0, duration: 0.5, stagger: 0.06, ease: 'back.out(2)',
-          scrollTrigger: { trigger: techRef.current, start: 'top 85%' } }
+          scrollTrigger: { trigger: techRef.current, start: 'top 90%', once: true } }
       );
     }
 
@@ -50,7 +50,7 @@ const About = () => {
       gsap.fromTo(Array.from(statsRef.current.children),
         { opacity: 0, y: 50, scale: 0.9 },
         { opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.1, ease: 'power3.out',
-          scrollTrigger: { trigger: statsRef.current, start: 'top 82%' } }
+          scrollTrigger: { trigger: statsRef.current, start: 'top 88%', once: true } }
       );
     }
   }, []);
@@ -59,7 +59,7 @@ const About = () => {
     <section id="about" data-scroll-section className="section section-divider" style={{ overflow: 'hidden' }}>
       <div className="container">
         {/* Header */}
-        <div ref={headerRef} className="section-header" style={{ opacity: 0 }}>
+        <div ref={headerRef} className="section-header">
           <div className="section-category">// 01. PHILOSOPHY</div>
           <h2 className="section-title">ABOUT ME</h2>
           <p className="section-subtitle">I build responsive, full-stack web applications with modern architecture.</p>

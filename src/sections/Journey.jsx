@@ -9,7 +9,7 @@ const Journey = () => {
   useGSAP((gsap) => {
     gsap.fromTo(headerRef.current, { opacity: 0, y: 40 }, {
       opacity: 1, y: 0, duration: 0.8,
-      scrollTrigger: { trigger: headerRef.current, start: 'top 85%' },
+      scrollTrigger: { trigger: headerRef.current, start: 'top 90%', once: true },
     });
 
     if (timelineRef.current) {
@@ -18,7 +18,7 @@ const Journey = () => {
         gsap.fromTo(item,
           { opacity: 0, x: i % 2 === 0 ? -50 : 50, scale: 0.96 },
           { opacity: 1, x: 0, scale: 1, duration: 0.8, ease: 'power3.out',
-            scrollTrigger: { trigger: item, start: 'top 85%' } }
+            scrollTrigger: { trigger: item, start: 'top 90%', once: true } }
         );
       });
     }
@@ -36,7 +36,7 @@ const Journey = () => {
   return (
     <section id="journey" data-scroll-section className="section section-divider" style={{ overflow: 'hidden' }}>
       <div className="container">
-        <div ref={headerRef} className="section-header" style={{ opacity: 0 }}>
+        <div ref={headerRef} className="section-header">
           <div className="section-category">// 04. THE PATH</div>
           <h2 className="section-title">MY JOURNEY</h2>
           <p className="section-subtitle">The milestones that shaped my engineering career.</p>
@@ -56,7 +56,7 @@ const Journey = () => {
             return (
               <div key={idx} className="timeline-item" style={{
                 display: 'flex', gap: '1.5rem', alignItems: 'flex-start',
-                position: 'relative', zIndex: 1, opacity: 0,
+                position: 'relative', zIndex: 1,
               }}>
                 <div className="timeline-node" style={{ width: 56, minWidth: 56, display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '0.3rem' }}>
                   <div style={{
