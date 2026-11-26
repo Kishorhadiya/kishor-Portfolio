@@ -6,10 +6,14 @@ export const projectsData = [
     category: "React.js",
     badge: "Event Platform",
     featured: true,
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
-    description: "A modern event management web application developed using React.js and Tailwind CSS. Explore events, view event details, book tickets, manage favorites, and interact through a responsive and user-friendly interface.",
-    shortDesc: "A modern event management web application built using React.js with a responsive and interactive user interface.",
-    fullDetails: "A modern event management web application developed using React.js, Tailwind CSS. The platform allows users to explore events, view event details, book tickets, manage favorites, and interact with different sections through a responsive and user-friendly interface. React Router DOM is used for navigation, while Tailwind CSS and Framer Motion are used to create a modern and interactive user experience.",
+    image:
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A modern event management web application developed using React.js and Tailwind CSS. Explore events, view event details, book tickets, manage favorites, and interact through a responsive and user-friendly interface.",
+    shortDesc:
+      "A modern event management web application built using React.js with a responsive and interactive user interface.",
+    fullDetails:
+      "A modern event management web application developed using React.js, Tailwind CSS. The platform allows users to explore events, view event details, book tickets, manage favorites, and interact with different sections through a responsive and user-friendly interface. React Router DOM is used for navigation, while Tailwind CSS and Framer Motion are used to create a modern and interactive user experience.",
     technologies: [
       "React.js",
       "React Router DOM",
@@ -47,11 +51,22 @@ export const projectsData = [
     category: "MERN Stack",
     badge: "Academic Platform",
     featured: true,
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
-    description: "A MERN stack based academic assignment management platform for creating, managing, evaluating, and tracking assignments with full CRUD operations and secure REST APIs.",
-    shortDesc: "A MERN stack based assignment management platform to create, manage, and track assignments.",
-    fullDetails: "A MERN stack based assignment management platform where users can create, manage, and track assignments with an efficient user-friendly interface.",
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "JWT"],
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A MERN stack based academic assignment management platform for creating, managing, evaluating, and tracking assignments with full CRUD operations and secure REST APIs.",
+    shortDesc:
+      "A MERN stack based assignment management platform to create, manage, and track assignments.",
+    fullDetails:
+      "A MERN stack based assignment management platform where users can create, manage, and track assignments with an efficient user-friendly interface.",
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "REST API",
+      "JWT",
+    ],
     techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API"],
     github: "https://github.com/Kishorhadiya",
     githubUrl: "https://github.com/Kishorhadiya",
@@ -72,11 +87,22 @@ export const projectsData = [
     category: "MERN Stack",
     badge: "Personal Finance",
     featured: true,
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
-    description: "A full-stack Money Management application built using the MERN stack. Track income and expenses, monitor budgets, manage categories, and analyze financial data through an interactive dashboard.",
-    shortDesc: "A personal finance management system developed using the MERN stack for income and expense tracking.",
-    fullDetails: "A full-stack Money Management application built using MongoDB, Express.js, React.js, and Node.js. Users can manage income and expenses, track transactions, monitor budgets, and analyze their financial data through a responsive and user-friendly interface.",
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "JWT Auth"],
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A full-stack Money Management application built using the MERN stack. Track income and expenses, monitor budgets, manage categories, and analyze financial data through an interactive dashboard.",
+    shortDesc:
+      "A personal finance management system developed using the MERN stack for income and expense tracking.",
+    fullDetails:
+      "A full-stack Money Management application built using MongoDB, Express.js, React.js, and Node.js. Users can manage income and expenses, track transactions, monitor budgets, and analyze their financial data through a responsive and user-friendly interface.",
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "JWT Auth",
+    ],
     techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
     github: "https://github.com/Kishorhadiya",
     githubUrl: "https://github.com/Kishorhadiya",
@@ -97,10 +123,14 @@ export const projectsData = [
     category: "MERN Stack",
     badge: "E-Commerce",
     featured: true,
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80",
-    description: "A production-grade full-featured MERN stack e-commerce web platform with product catalog, cart & checkout, JWT authentication, and an admin dashboard for product and order management.",
-    shortDesc: "A full-featured MERN stack e-commerce web platform with product catalog, cart & checkout, JWT authentication, and admin order management.",
-    fullDetails: "A production-grade full-stack E-Commerce platform built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The platform allows users to explore products by categories, search items, manage cart quantities, securely authenticate, and place orders. Includes an administrator dashboard to add/edit products, manage stock, and track order fulfillment.",
+    image:
+      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A production-grade full-featured MERN stack e-commerce web platform with product catalog, cart & checkout, JWT authentication, and an admin dashboard for product and order management.",
+    shortDesc:
+      "A full-featured MERN stack e-commerce web platform with product catalog, cart & checkout, JWT authentication, and admin order management.",
+    fullDetails:
+      "A production-grade full-stack E-Commerce platform built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The platform allows users to explore products by categories, search items, manage cart quantities, securely authenticate, and place orders. Includes an administrator dashboard to add/edit products, manage stock, and track order fulfillment.",
     technologies: [
       "MongoDB",
       "Express.js",
@@ -118,10 +148,10 @@ export const projectsData = [
       "Tailwind CSS",
       "REST API",
     ],
-    github: "https://github.com/Kishorhadiya/EcomSystems",
-    githubUrl: "https://github.com/Kishorhadiya/EcomSystems",
-    liveDemo: "https://ecomsystems-frontend.onrender.com/",
-    liveUrl: "https://ecomsystems-frontend.onrender.com/",
+    github: "https://github.com/Kishorhadiya/E-Commerce.git",
+    githubUrl: "https://github.com/Kishorhadiya/E-Commerce.git",
+    liveDemo: "https://e-commerce-frontend-916g.onrender.com//",
+    liveUrl: "https://e-commerce-frontend-916g.onrender.com/",
     highlights: [
       "Built responsive shopping storefront with product search, filtering, and detail views.",
       "Designed secure RESTful API with Node.js and Express.js with JWT authentication.",
@@ -138,10 +168,14 @@ export const projectsData = [
     category: "MERN Stack",
     badge: "Real-Time / Socket.IO",
     featured: true,
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80",
-    description: "A real-time MERN stack chat application powered by Socket.IO for instant private messaging, user authentication, online/offline status indicators, and persistent MongoDB chat storage.",
-    shortDesc: "A real-time MERN stack chat application with Socket.IO, user authentication, private messaging, online status, and instant message delivery.",
-    fullDetails: "A full-stack real-time Chat Application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) with Socket.IO for real-time communication. The application allows authenticated users to communicate through private chats, send and receive messages instantly, view online/offline status, and manage conversations. Socket.IO enables real-time communication between clients and the server without requiring page refreshes, while MongoDB stores user and message data securely.",
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A real-time MERN stack chat application powered by Socket.IO for instant private messaging, user authentication, online/offline status indicators, and persistent MongoDB chat storage.",
+    shortDesc:
+      "A real-time MERN stack chat application with Socket.IO, user authentication, private messaging, online status, and instant message delivery.",
+    fullDetails:
+      "A full-stack real-time Chat Application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) with Socket.IO for real-time communication. The application allows authenticated users to communicate through private chats, send and receive messages instantly, view online/offline status, and manage conversations. Socket.IO enables real-time communication between clients and the server without requiring page refreshes, while MongoDB stores user and message data securely.",
     technologies: [
       "MongoDB",
       "Express.js",
@@ -182,10 +216,14 @@ export const projectsData = [
     category: "MERN Stack",
     badge: "Management Platform",
     featured: true,
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
-    description: "A full-featured MERN stack Employee Management System to streamline employee onboarding, department tracking, leave requests, and role-based access control (Admin & Employee).",
-    shortDesc: "A full-featured MERN stack Employee Management System to streamline employee onboarding, department tracking, leave requests, and role-based access control.",
-    fullDetails: "A comprehensive Employee Management System built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The application simplifies organizational administration with centralized employee records management, role-based authentication, department allocations, leave tracking, and salary overview. Admins can manage employee directories, process leave requests, and oversee departments, while employees can view their profile data and track application statuses seamlessly.",
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A full-featured MERN stack Employee Management System to streamline employee onboarding, department tracking, leave requests, and role-based access control (Admin & Employee).",
+    shortDesc:
+      "A full-featured MERN stack Employee Management System to streamline employee onboarding, department tracking, leave requests, and role-based access control.",
+    fullDetails:
+      "A comprehensive Employee Management System built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The application simplifies organizational administration with centralized employee records management, role-based authentication, department allocations, leave tracking, and salary overview. Admins can manage employee directories, process leave requests, and oversee departments, while employees can view their profile data and track application statuses seamlessly.",
     technologies: [
       "MongoDB",
       "Express.js",
