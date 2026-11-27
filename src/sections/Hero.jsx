@@ -170,7 +170,7 @@ const Hero = () => {
             }} className="btn btn-dark interactive">
               VIEW PROJECTS <FiArrowUpRight />
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+            <a href="https://drive.google.com/file/d/1qM2rlHQAZVxc2mbkIRsAisZnXVCsDY6A/view?usp=drive_link" target="_blank" rel="noopener noreferrer"
               className="btn btn-outline interactive" style={{ gap: '0.5rem' }}>
               <FiFileText /> RESUME
             </a>

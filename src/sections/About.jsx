@@ -97,7 +97,7 @@ const About = () => {
 
             <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1qM2rlHQAZVxc2mbkIRsAisZnXVCsDY6A/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-dark interactive"

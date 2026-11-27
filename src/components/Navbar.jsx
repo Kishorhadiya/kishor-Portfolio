@@ -119,7 +119,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1qM2rlHQAZVxc2mbkIRsAisZnXVCsDY6A/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="interactive"
@@ -200,7 +200,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1qM2rlHQAZVxc2mbkIRsAisZnXVCsDY6A/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}

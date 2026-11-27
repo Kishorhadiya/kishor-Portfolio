@@ -62,7 +62,7 @@ const Contact = () => {
               className="btn btn-white btn-lg interactive" style={{ gap: '0.75rem' }}>
               <FiMail size={18} /> EMAIL ME <FiArrowUpRight />
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+            <a href="https://drive.google.com/file/d/1qM2rlHQAZVxc2mbkIRsAisZnXVCsDY6A/view?usp=drive_link" target="_blank" rel="noopener noreferrer"
               className="btn btn-outline btn-lg interactive" style={{ gap: '0.75rem', borderColor: 'rgba(255,255,255,0.25)', color: 'white' }}>
               <FiFileText size={18} /> VIEW RESUME <FiArrowUpRight />
             </a>
